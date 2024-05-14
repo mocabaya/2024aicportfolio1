@@ -1,0 +1,160 @@
+html {
+  height: 100%;
+  width: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100%;
+    margin: 0rem;
+    background-color: #CDDFA3;
+    line-height: 1.5;
+    
+}
+h1 {
+    font-size: 2.027rem;
+}
+h2 {
+    font-size: 1.802rem;
+}
+h3 {
+    font-size: 1.602rem;
+}
+h4 {
+    font-size: 1.424rem;
+}
+p {
+    font-size: 1rem;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+nav {
+    background-color: #2E0106;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-right: 1rem;
+}
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+nav a {
+    color: white;
+}
+@font-face {
+    font-family: 'Apple';
+    src: url('/font/AppleGaramond.ttf');
+}
+hr {
+    border: 1px solid #023618;
+    width:100%;
+    background-color: #023618;
+}
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-center;
+}
+.heroes-container .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem 0.25rem 0rem;
+    width: max-content;
+    border-radius: 70px;
+}
+.icon-text, .icon {
+    margin-left: 1rem;
+}
+.heroes-container .icon {
+    color: black;
+}
+.heroes-container .icon:hover {
+    color: #5E0B15;
+}
+header {
+    background-color: #5E0B15;
+    color: white;
+    margin: 0rem auto;
+}
+header h1 {
+    color: white;
+}
+
+.heroes-container {
+    background-image: url('images/heroes.png');
+    min-height: 40rem;
+    padding: 1rem 3rem 5rem 3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.hero-text {
+    width: 50%;
+    font: monoscript;
+    font-size: 1.25rem;
+}
+.heroes-container p {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.heroes-container h1 {
+    color: #2E0106;
+    font-size: 4rem;
+    width: max-content;
+}
+.education-body, .music-body {
+    width: 100%;
+    padding: 1rem 3rem 5rem 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.education-text, .music-text {
+    margin-left: 1rem;
+    /* For full screen 4rem is better */
+}
+section {
+    margin: 2rem 3rem 0rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Apple';
+    letter-spacing: 1px;
+}
+.section-title {
+    /* border: 0.2rem solid #2E0106; */
+    border-radius: 70px;
+    background-color: #90A955;
+    box-shadow: 0rem 0.5rem 0.5rem -.2rem rgba(0, 0, 0, .2);
+    color: #2E0106;
+    transition: 2s;
+    padding: 1rem;
+}
+.section-title:hover {
+    background-color: #2E0106;
+    color: white;
+    transform: scale(1.1);
+    transition: 1s;
+}
+.education-image {
+    align-self: center;
+}
+.languages {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.project-text {
+    margin-left: 5rem;
+}
