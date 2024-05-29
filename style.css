@@ -8,7 +8,6 @@ body {
     margin: 0rem;
     background-color: #CDDFA3;
     line-height: 1.5;
-    
 }
 h1 {
     font-size: 2.027rem;
@@ -25,40 +24,104 @@ h4 {
 p {
     font-size: 1rem;
 }
-main {
+/* main {
     display: flex;
     flex-direction: row;
-}
-nav {
-    background-color: #2E0106;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-around;
-    align-items: flex-start;
-    padding-right: 1rem;
-}
-nav ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly
-}
-nav a {
-    color: white;
-}
-@font-face {
-    font-family: 'Apple';
-    src: url('/font/AppleGaramond.ttf');
-}
+} */
 hr {
     border: 1px solid #023618;
     width:100%;
     background-color: #023618;
 }
-.icon-container {
+header {
+    background-color: #5E0B15;
+    color: white;
+    margin: 0rem auto;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: flex-center;
+}
+header h1 {
+    color: white;
+}
+/* Navigation bar */
+.nav-desktop {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+nav a {
+    color: white;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+}
+.hamburger {
+    display: none;
+    margin-left: 1rem;
+}
+.check {
+    position: absolute;
+    left: -500px
+}
+.nav-mobile {
+    display: none;
+    transform: translateX(-150%);
+    transition: transform .5s ease;
+    width: fit-content;
+}
+.nav-mobile ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+@media (max-width: 40rem) {
+    .nav-desktop {display: none;}
+    /* .nav-mobile {display: flex; transform: translateX(0%);} */
+    .hamburger {display: block;}
+    .nav-icon-hamburger {display: block;}
+    .nav-icon-close {display: none;}
+    .check:checked ~ header {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .check:checked ~ .hamburger .nav-icon-hamburger {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        display: none;
+    }
+    .check:checked ~ .hamburger .nav-icon-close {
+        display: block;
+    }
+    .check:checked ~ .nav-mobile {
+        display: block;
+        transform: translateX(0%);
+        transition: transform .5s ease;
+        z-index: 100;
+        opacity: 1;
+        
+    }
+    .check:checked ~ .header-text {
+        display: none;
+    }
+}
+/* Heroes page */
+.header-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@font-face {
+    font-family: 'Apple';
+    src: url('/font/AppleGaramond.ttf');
 }
 .heroes-container .icon-container {
     display: flex;
@@ -69,7 +132,7 @@ hr {
     width: max-content;
     border-radius: 70px;
 }
-.icon-text, .icon {
+.header-text, .icon {
     margin-left: 1rem;
 }
 .heroes-container .icon {
@@ -78,15 +141,6 @@ hr {
 .heroes-container .icon:hover {
     color: #5E0B15;
 }
-header {
-    background-color: #5E0B15;
-    color: white;
-    margin: 0rem auto;
-}
-header h1 {
-    color: white;
-}
-
 .heroes-container {
     background-image: url('images/heroes.png');
     min-height: 40rem;
@@ -110,14 +164,15 @@ header h1 {
 }
 .heroes-container h1 {
     color: #2E0106;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 1.3484848484848484rem + 3.0303030303030303vw, 4rem);
     width: max-content;
 }
+/* Sections */
 .education-body, .music-body {
     width: 100%;
     padding: 1rem 3rem 5rem 3rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .education-text, .music-text {
     margin-left: 1rem;
@@ -155,6 +210,23 @@ section {
     flex-direction: row;
     justify-content: space-evenly;
 }
+.project {
+    width: 100%;
+    padding: 1rem 3rem 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .project-text {
-    margin-left: 5rem;
+    align-self: flex-start;
+    margin: 1rem;
+}
+@media (max-width: 40rem) {
+    .education-image, .music-image, .projects-image {
+        display: none;
+    }
+    .languages {
+        flex-direction: column;
+    }
 }

@@ -12,10 +12,36 @@
 </head>
 <body>
     <!--Header-->
-        <header class='icon-container'>
-            <ion-icon name="reorder-three" size='large' class='icon'></ion-icon>
-            <h2 class='icon-text'>AIC</h2>
-        </header>
+    <header>
+        <input class='check' type='checkbox' id='hamburger-checkbox'>
+        <label class='hamburger' for='hamburger-checkbox'>
+            <ion-icon name='menu-outline' size='large' class='nav-icon-hamburger'></ion-icon>
+            <ion-icon name='close-outline' size='large' class='nav-icon-close'></ion-icon>
+        </label>
+        <nav class='nav-mobile'>
+            <ul>
+                <li>
+                    <a href='#skills'>Skills</a>
+                </li>
+                <li>
+                    <a href='#education'>Education</a>
+                </li>
+                <li>
+                    <a href='#music'>Musical Experience</a>
+                </li>
+                <li>
+                    <a href='#projects'>Projects</a>
+                </li>
+            </ul>
+        </nav>
+        <h2 class='header-text'>AIC</h2>
+        <nav class='nav-desktop'>
+            <a href='#skills'>Skills</a>
+            <a href='#education'>Education</a>
+            <a href='#music'>Musical Experience</a>
+            <a href='#projects'>Projects</a>
+        </nav>
+    </header>
     <main>
     <!--Title page-->
         <div class='heroes-container'>
@@ -30,23 +56,6 @@
                 <a id='goodreads' href='https://www.goodreads.com/mocabaya' target='_blank'><ion-icon name="book" size='large' class='icon'></ion-icon></a>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href='#skills'><h3>Skills</h3></a>
-                </li>
-                <li>
-                    <a href='#education'><h3>Education</h3></a>
-                </li>
-                <li>
-                    <a href='#music'><h3>Musical Experience</h3></a>
-                </li>
-                <li>
-                    <a href='#projects'><h3>Projects</h3></a>
-                </li>
-            </ul>
-            
-        </nav>
     </main>
 <!--Skills-->
     <section class='skills' id='skills'>
@@ -185,7 +194,7 @@
                     </li>
                 </ul>
             </div>
-            <div>
+            <div class='projects-image'>
                 <img src='images/cardle.png' size='100'>
             </div>
         </div>
